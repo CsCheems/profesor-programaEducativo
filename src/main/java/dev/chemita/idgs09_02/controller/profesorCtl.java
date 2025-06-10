@@ -13,7 +13,6 @@ import dev.chemita.idgs09_02.model.entity.Profesor;
 import dev.chemita.idgs09_02.model.repository.ProfesorRepo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -51,7 +50,7 @@ public class profesorCtl {
             Profesor p = opt.get();
             p.setNombre(entity.getNombre());
             p.setApellidos(entity.getApellidos());
-            p.setGenero(entity.isGenero());
+            p.setGenero(entity.getGenero());
             p.setClavePE(entity.getClavePE());
             p.setActivo(entity.isActivo());
             return ResponseEntity.ok(pRepo.save(p));
