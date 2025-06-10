@@ -21,7 +21,9 @@ public class ProgramaEducativo {
     private String clave;
     private boolean activo;
     @ManyToOne
-    @JoinColumn(name = "id_prof")
+    @JoinColumn(name = "clavePE")
     @JsonIgnoreProperties(value = "programaEducativo")
-    private Profesor division;
+    private Profesor profesor;
+
+    
 }
